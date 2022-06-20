@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 # 102-magic_calculation.py
-# Gedeon Obae Gekonge <gideonobae@gmail.com.com>
-
-
 def magic_calculation(a, b):
     result = 0
     for i in range(1, 3):

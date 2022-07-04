@@ -1,21 +1,19 @@
 #!/usr/bin/python3
-"""
-Module 8-rectangle
-"""
-
-
+# 8-rectangle.py
+"""Defines a class Rectangle that inherits from BaseGeometry."""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """
-    inherits from BaseGeometry
-    """
+    """Represent a rectangle using BaseGeometry."""
+
     def __init__(self, width, height):
-        """validate and initialize width and height
-        Arguments
+        """Intialize a new Rectangle.
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
         """
-        super().integer_validator("width", width)
+        self.integer_validator("width", width)
         self.__width = width
-        super().integer_validator("height", height)
+        self.integer_validator("height", height)
         self.__height = height

@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+"""
+Module 2-is_same_class
+Contains a mthod that returns
+True if two objects are the same
+or False if otherwise
+"""
+
+
+def is_same_class(obj, a_class):
+    """ Returns True or False """
+    return(isinstance(obj, a_class))

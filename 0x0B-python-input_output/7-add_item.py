@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""
-Module 7-add_item.py
-"""
-
-import sys
+"""Handles file input and saves to file"""
+from sys import argv
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
-filename = "add_item.json"
 
+argv.pop(0)
 try:
-    content = load_from_json_file(filename)
+    deserialized = load_from_json_file("add_item.json")
+    if deserialized is None:
+        save_to_json_file(argv, "add_item.json")
+    else:
+        deserialized.extend(argv)
+        save_to_json_file(deserialized, "add_item.json")
 except FileNotFoundError:
-    content = []
-content.extend(sys.argv[1:])
-save_to_json_file(content, filename)
+    save_to_json_file(argv, "add_item.json")

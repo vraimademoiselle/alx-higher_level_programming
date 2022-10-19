@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #!/usr/bin/node
 // JS Script
@@ -7,5 +8,11 @@ module.exports = class Rectangle {
       this.width = w;
       this.height = h;
     }
+=======
+#!/usr/bin/node
+module.exports = class Rectangle {
+  constructor (w, h) {
+    if (w > 0 && h > 0) { [this.width, this.height] = [w, h]; }
+>>>>>>> refs/remotes/origin/main
   }
 };

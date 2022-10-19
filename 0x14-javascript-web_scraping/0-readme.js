@@ -10,6 +10,3 @@ fs.readFile(file, 'utf-8', function (err, data) {
     console.log(data);
   }
 });
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
